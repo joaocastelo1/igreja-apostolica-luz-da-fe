@@ -1,0 +1,7 @@
+{
+  "description": "Site institucional moderno e inspirador para a Igreja Evangélica Luz da Fé, apresentando agenda de cultos, ministérios e liderança do Pastor Bruno.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "name": "App"
+}
