@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Building2, Users, BookOpen, HandHeart, CalendarHeart, Copy, CheckCircle2 } from 'lucide-react';
+import { Heart, Building2, Users, BookOpen, HeartHandshake, Calendar, Copy, CheckCircle2 } from 'lucide-react';
 
 export default function Contribution() {
   const [copiedPix, setCopiedPix] = useState(false);
@@ -75,8 +75,8 @@ export default function Contribution() {
               { icon: Building2, title: "Manutenção da Igreja", desc: "Zelo pelo templo e infraestrutura para recebermos bem a todos." },
               { icon: Users, title: "Projetos Sociais", desc: "Ações contínuas para ajudar nossa comunidade local." },
               { icon: BookOpen, title: "Evangelismo", desc: "Expansão da mensagem de Cristo para alcançar mais lares." },
-              { icon: HandHeart, title: "Apoio a Famílias", desc: "Assistência às famílias necessitadas da comunhão e região." },
-              { icon: CalendarHeart, title: "Eventos Comunitários", desc: "Realização de ações que promovem integração e fé." },
+              { icon: HeartHandshake, title: "Apoio a Famílias", desc: "Assistência às famílias necessitadas da comunhão e região." },
+              { icon: Calendar, title: "Eventos Comunitários", desc: "Realização de ações que promovem integração e fé." },
             ].map((item, i) => (
               <motion.div 
                 key={i}
