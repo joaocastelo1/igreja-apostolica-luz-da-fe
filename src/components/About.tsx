@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const aboutSlides = [
   { url: "/img/logo_1.png", title: "Nossa Identidade", isLogo: true },
-  { url: "/img/banner.png", title: "Nossa Casa", isLogo: false },
+  { url: "/img/banner_luz_da_fe-1.png", title: "Nossa Casa", isLogo: false },
   { url: "/img/visao_area_do_templo.jpeg", title: "Nossa Visão", isLogo: false }
 ];
 
@@ -36,6 +36,7 @@ const About = () => {
             className="lg:w-1/2 relative"
           >
             <div className="relative z-10 rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-slate-50 border-[8px] sm:border-[12px] border-white aspect-[3/4] sm:aspect-[4/3] group">
+              <div className="absolute inset-0 bg-white/20 z-5"></div>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current}
@@ -48,7 +49,7 @@ const About = () => {
                   <img 
                     src={aboutSlides[current].url} 
                     alt={aboutSlides[current].title} 
-                    className={`w-full h-full ${aboutSlides[current].isLogo ? 'object-contain p-4 sm:p-8' : 'object-cover'} photo-enhance`}
+                    className={`w-full h-full ${aboutSlides[current].isLogo ? 'object-contain p-4 sm:p-8' : 'object-cover brightness-110'} photo-enhance`}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -87,20 +88,20 @@ const About = () => {
             className="lg:w-1/2"
           >
             <div className="mb-10">
-              <span className="text-[#D4AF37] font-bold tracking-[0.4em] uppercase text-xs mb-4 block">Nossa Essência</span>
-              <h2 className="text-4xl md:text-6xl font-serif text-navy mb-8 leading-tight">Um lugar de Glória e Transformação</h2>
+              <span className="text-[#D4AF37] font-bold tracking-[0.4em] uppercase text-xs sm:text-sm mb-4 block">Nossa Essência</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-navy mb-8 leading-tight">Um lugar de Glória e Transformação</h2>
               <div className="w-24 h-2 gold-gradient rounded-full"></div>
             </div>
 
-            <div className="space-y-8 text-slate-600 text-lg md:text-xl leading-relaxed font-light">
-              <p className="font-medium text-navy border-l-4 border-[#D4AF37] pl-6 italic">
+            <div className="space-y-6 sm:space-y-8 text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed font-light">
+              <p className="font-bold text-[#D4AF37] text-lg sm:text-xl border-l-4 border-[#D4AF37] pl-6 italic">
                 Somos a Igreja Apostólica Luz da Fé (IALF), um lugar onde a Glória de Deus se manifesta em cada detalhe.
               </p>
-              <p>
+              <p className="text-slate-600">
                 Localizada na Rua Tomé de Souza, em Codó-MA, nossa igreja é guiada por princípios apostólicos, focada na restauração de vidas e no fortalecimento das famílias através da Palavra de Deus.
               </p>
-              <p>
-                Sob a liderança do <strong>Pastor Bruno Boavista Castelo Branco</strong>, buscamos ser um farol de esperança e fé, transformando vidas através do amor de Cristo.
+              <p className="text-slate-600">
+                Sob a liderança do <strong className="text-navy">Pastor Bruno Boavista Castelo Branco</strong>, buscamos ser um farol de esperança e fé, transformando vidas através do amor de Cristo.
               </p>
             </div>
 
