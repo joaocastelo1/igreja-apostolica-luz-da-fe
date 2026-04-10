@@ -35,7 +35,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 relative"
           >
-            <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-slate-50 border-[12px] border-white aspect-[4/3] group">
+            <div className="relative z-10 rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] bg-slate-50 border-[8px] sm:border-[12px] border-white aspect-[3/4] sm:aspect-[4/3] group">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={current}
@@ -43,12 +43,12 @@ const About = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.7 }}
-                  className="absolute inset-0 w-full h-full flex items-center justify-center p-8"
+                  className="absolute inset-0 w-full h-full flex items-center justify-center p-4 sm:p-8"
                 >
                   <img 
                     src={aboutSlides[current].url} 
                     alt={aboutSlides[current].title} 
-                    className={`w-full h-full ${aboutSlides[current].isLogo ? 'object-contain scale-75' : 'object-cover'} photo-enhance`}
+                    className={`w-full h-full ${aboutSlides[current].isLogo ? 'object-contain p-4 sm:p-8' : 'object-cover'} photo-enhance`}
                   />
                 </motion.div>
               </AnimatePresence>
