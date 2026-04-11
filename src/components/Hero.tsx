@@ -2,26 +2,26 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Youtube, Heart } from 'lucide-react';
+import { Youtube, Heart, ChevronDown } from 'lucide-react';
 
 const slides = [
   {
-    image: "/img/visao_area_do_templo.jpeg",
-    title: "Igreja Apostólica Luz da Fé",
-    subtitle: "Um lugar onde a Glória de Deus se manifesta em cada detalhe",
-    leader: "Sob a liderança do Pastor Bruno Boavista Castelo Branco",
-  },
-  {
     image: "/img/pastor1.jpeg",
-    title: "Chamado e Vocação",
-    subtitle: "Pastor Bruno Boavista Castelo Branco guiando com amor e fé",
-    leader: "Uma voz profética para esta geração em Codó-MA",
+    title: "Onde a Glória de Deus se Manifesta",
+    subtitle: "Um lugar de refúgio, restauração e encontros reais com o Espírito Santo.",
+    leader: "Venha viver o sobrenatural de Deus com a nossa família.",
   },
   {
     image: "/img/pastor2.jpeg",
-    title: "Palavra e Poder",
-    subtitle: "Mensagens de restauração que transformam vidas",
-    leader: "Bairro São Sebastião - Venha ser abençoado",
+    title: "Uma Obra Firmada na Verdade",
+    subtitle: "Vivendo o extraordinário de Deus através do ensino profético e adoração genuína.",
+    leader: "Edificando vidas sobre a rocha inabalável da palavra.",
+  },
+  {
+    image: "/img/pastor4.jpeg",
+    title: "Liderança com Propósito",
+    subtitle: "Sob a unção e transparência do Pastor Bruno Boavista Castelo Branco e sua família.",
+    leader: "Apascentando o rebanho com amor, fervor e excelência.",
   }
 ];
 
@@ -31,7 +31,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 6000);
+    }, 7000);
     return () => clearInterval(timer);
   }, []);
 
@@ -43,73 +43,91 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute inset-0 h-full w-full"
         >
           {/* Even stronger overlay for text visibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/40 to-navy/90 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/60 to-navy/95 z-10" />
           <motion.img
             src={slides[current].image}
             alt="Hero Background"
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 6, ease: "linear" }}
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.2 }}
+            transition={{ duration: 10, ease: "linear" }}
             className="h-full w-full object-cover photo-enhance"
           />
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
+      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-6 pt-20">
         <motion.div
           key={`content-${current}`}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="max-w-5xl"
+          className="max-w-6xl"
         >
-          {/* Enhanced font weights and shadows for "destaque" */}
-          <span className="text-[#D4AF37] font-black tracking-[0.5em] uppercase text-xs sm:text-base mb-8 block drop-shadow-[0_4px_4px_rgba(0,0,0,1)]">
+          <motion.span 
+            initial={{ opacity: 0, letterSpacing: "0.1em" }}
+            animate={{ opacity: 1, letterSpacing: "0.4em" }}
+            className="text-[#D4AF37] font-black uppercase text-[10px] sm:text-xs mb-4 block drop-shadow-lg"
+          >
             Seja Bem-vindo à IALF
-          </span>
-          <h1 className="text-6xl md:text-9xl font-serif font-black text-white mb-8 leading-tight drop-shadow-[0_15px_20px_rgba(0,0,0,1)] drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]">
+          </motion.span>
+          
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-black text-[#FFD700] mb-6 leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
             {slides[current].title}
           </h1>
-          <p className="text-2xl md:text-4xl text-gray-100 mb-8 font-medium drop-shadow-[0_5px_10px_rgba(0,0,0,1)] max-w-4xl mx-auto leading-relaxed">
-            {slides[current].subtitle}
+          
+          <div className="w-20 h-1 bg-[#FFD700] mx-auto mb-6 rounded-full shadow-lg" />
+
+          <p className="text-lg md:text-2xl text-slate-200 mb-6 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] max-w-3xl mx-auto leading-relaxed italic px-4">
+            &quot;{slides[current].subtitle}&quot;
           </p>
-          <p className="text-lg md:text-2xl text-[#D4AF37] mb-12 italic opacity-100 font-bold drop-shadow-[0_3px_6px_rgba(0,0,0,1)]">
+          
+          <p className="text-base md:text-xl text-[#FFD700]/90 mb-10 font-black drop-shadow-md uppercase tracking-[0.2em]">
             {slides[current].leader}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <a
               href="https://www.youtube.com/@brunoboavista5252"
               target="_blank"
-              className="flex items-center space-x-3 bg-white hover:bg-gray-100 text-navy font-black py-6 px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_20px_50px_rgba(0,0,0,0.6)] uppercase tracking-[0.2em] text-sm w-full sm:w-auto justify-center"
+              className="flex items-center space-x-3 bg-white hover:bg-[#FFD700] hover:text-navy text-navy font-black py-3.5 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_12px_30px_rgba(0,0,0,0.4)] uppercase tracking-[0.15em] text-[9px] sm:text-xs w-full sm:w-auto justify-center group"
             >
-              <Youtube size={24} className="text-red-600" />
-              <span>Assistir no YouTube</span>
+              <Youtube size={18} className="text-red-600 group-hover:text-white transition-colors" />
+              <span>Cultos ao Vivo</span>
             </a>
             <a
               href="#contato"
-              className="flex items-center space-x-3 gold-gradient text-white font-black py-6 px-12 rounded-full transition-all transform hover:scale-105 shadow-[0_20px_50px_rgba(212,175,55,0.4)] uppercase tracking-[0.2em] text-sm w-full sm:w-auto justify-center"
+              className="flex items-center space-x-3 bg-navy/80 backdrop-blur-md border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-white font-black py-3.5 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_12px_30px_rgba(0,0,0,0.2)] uppercase tracking-[0.15em] text-[9px] sm:text-xs w-full sm:w-auto justify-center"
             >
-              <Heart size={24} />
+              <Heart size={18} />
               <span>Pedir Oração</span>
             </a>
           </div>
         </motion.div>
       </div>
 
-      {/* Progress Indicators */}
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-30 flex space-x-6">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`h-2 rounded-full transition-all duration-500 shadow-md ${i === current ? 'bg-[#D4AF37] w-20 shadow-[0_0_15px_rgba(212,175,55,1)]' : 'bg-white/40 w-10'}`}
-          />
-        ))}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="text-white/30 mb-8"
+        >
+          <ChevronDown size={32} />
+        </motion.div>
+        
+        {/* Progress Indicators */}
+        <div className="flex space-x-4">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-1.5 rounded-full transition-all duration-700 ${i === current ? 'bg-[#D4AF37] w-16 shadow-[0_0_20px_rgba(212,175,55,0.8)]' : 'bg-white/20 w-8'}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

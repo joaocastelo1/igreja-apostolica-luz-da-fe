@@ -29,13 +29,13 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#060B1A] backdrop-blur-2xl border-b border-[#D4AF37]/20 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]' : 'bg-gradient-to-b from-[#060B1A]/90 via-[#060B1A]/40 to-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center space-x-2 sm:space-x-4">
-          <div className="w-10 sm:w-14 h-10 sm:h-14 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.4)] group cursor-pointer transition-transform hover:scale-110">
+          <div className="flex items-center space-x-3 sm:space-x-4">
+          <div className="w-14 sm:w-20 h-14 sm:h-20 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.4)] group cursor-pointer transition-transform hover:scale-110">
             <img src="/img/logo_1.png" alt="IALF Logo" className="w-full h-full object-contain p-1 sm:p-1.5" />
           </div>
           <div className="flex flex-col">
-            <span className="font-serif font-black text-lg sm:text-2xl leading-none text-white tracking-tight drop-shadow-[0_4px_6px_rgba(0,0,0,1)] uppercase">Luz da Fé</span>
-            <span className="text-[10px] sm:text-xs text-[#D4AF37] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-black drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Apostólica</span>
+            <span className="font-serif font-black text-xl sm:text-3xl leading-none text-white tracking-tight drop-shadow-[0_4px_6px_rgba(0,0,0,1)] uppercase">Luz da Fé</span>
+            <span className="text-[11px] sm:text-sm text-yellow-700 uppercase tracking-[0.3em] sm:tracking-[0.5em] font-black drop-shadow-[0_2px_4px_rgba(0,0,0,1)]">Igreja</span>
           </div>
         </div>
 

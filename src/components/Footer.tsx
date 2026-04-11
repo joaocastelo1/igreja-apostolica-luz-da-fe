@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Instagram, Facebook, Youtube, MapPin, Phone, Heart } from 'lucide-react';
 
 const Footer = () => {
@@ -36,12 +37,12 @@ const Footer = () => {
           <div>
             <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Links Rápidos</h4>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="/#home" className="hover:text-white transition-colors">Início</a></li>
-              <li><a href="/#sobre" className="hover:text-white transition-colors">Sobre a Igreja</a></li>
-              <li><a href="/#lideranca" className="hover:text-white transition-colors">Nossa Liderança</a></li>
-              <li><a href="/#midia" className="hover:text-white transition-colors">Galeria de Fotos</a></li>
-              <li><a href="/#cultos" className="hover:text-white transition-colors">Programação</a></li>
-              <li><a href="/#contribuicao" className="hover:text-white transition-colors">Contribuição</a></li>
+              <li><Link href="/#home" className="hover:text-white transition-colors">Início</Link></li>
+              <li><Link href="/#sobre" className="hover:text-white transition-colors">Sobre a Igreja</Link></li>
+              <li><Link href="/#lideranca" className="hover:text-white transition-colors">Nossa Liderança</Link></li>
+              <li><Link href="/#midia" className="hover:text-white transition-colors">Galeria de Fotos</Link></li>
+              <li><Link href="/#cultos" className="hover:text-white transition-colors">Programação</Link></li>
+              <li><Link href="/#contribuicao" className="hover:text-white transition-colors">Contribuição</Link></li>
             </ul>
           </div>
 
@@ -51,11 +52,18 @@ const Footer = () => {
             <ul className="space-y-6 text-sm text-gray-400">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-[#D4AF37] shrink-0" />
-                <span>Rua Tomé de Souza, 897-A, Bairro São Sebastião, Codó - MA</span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=R.+Tomé+de+Souza,+897+-+A+-+Bairro+São+Sebastião,+Codó+-+MA,+65400-000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  R. Tomé de Souza, 897 - A, Bairro São Sebastião, Codó - MA, 65400-000
+                </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-[#D4AF37] shrink-0" />
-                <span>(99) 9259-3769</span>
+                <span>(99) 98259-3769</span>
               </li>
             </ul>
           </div>
@@ -64,7 +72,7 @@ const Footer = () => {
           <div>
             <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-xs mb-8">Pedido de Oração</h4>
             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
-              <p className="text-xs text-gray-300 mb-4 italic">"Buscai ao Senhor enquanto se pode achar."</p>
+              <p className="text-xs text-gray-300 mb-4 italic">&quot;Buscai ao Senhor enquanto se pode achar.&quot;</p>
               <a 
                 href="#contato" 
                 className="block text-center bg-white text-black font-bold py-3 px-6 rounded-xl text-xs uppercase tracking-widest hover:bg-[#B38728] hover:text-white hover:shadow-[0_10px_20px_rgba(179,135,40,0.3)] active:scale-95 transition-all shadow-md border border-slate-200"
@@ -77,11 +85,21 @@ const Footer = () => {
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-500">
           <p>© {new Date().getFullYear()} Igreja Apostólica Luz da Fé. Todos os direitos reservados.</p>
-          <p className="mt-4 md:mt-0 flex items-center space-x-1">
-            <span>Desenvolvido com</span>
-            <Heart size={10} className="text-red-500 fill-red-500" />
-            <span>para o Reino de Deus</span>
-          </p>
+          <div className="mt-4 md:mt-0 flex flex-col items-center md:items-end space-y-2">
+            <p className="flex items-center space-x-1">
+              <span>Desenvolvido com</span>
+              <Heart size={10} className="text-red-500 fill-red-500" />
+              <span>para o Reino de Deus</span>
+            </p>
+            <a 
+              href="https://wa.me/5586999032854" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-[#D4AF37] transition-colors font-bold"
+            >
+              Dev: João Castelo de Sousa Ferreira
+            </a>
+          </div>
         </div>
       </div>
     </footer>

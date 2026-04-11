@@ -42,6 +42,20 @@ const Schedule = () => {
           <div className="w-20 h-1.5 bg-[#D4AF37] mx-auto rounded-full"></div>
         </div>
 
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto mb-16 rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group"
+        >
+          <img 
+            src="/img/horarios_do_culto.jpg" 
+            alt="Horários de Culto" 
+            className="w-full h-auto object-cover photo-enhance transition-transform group-hover:scale-105 duration-700" 
+          />
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {events.map((event, index) => (
             <motion.div

@@ -72,13 +72,20 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="font-bold text-navy uppercase tracking-wider text-sm mb-2">Endereço</h4>
-                <p className="text-slate-600 text-lg leading-relaxed">
-                  Rua Tomé de Souza, 897-A<br />
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=R.+Tomé+de+Souza,+897+-+A+-+Bairro+São+Sebastião,+Codó+-+MA,+65400-000" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-600 text-lg leading-relaxed hover:text-[#D4AF37] transition-colors block"
+                >
+                  R. Tomé de Souza, 897 - A<br />
                   Bairro São Sebastião<br />
-                  Codó - MA
-                </p>
+                  Codó - MA, 65400-000
+                </a>
               </div>
             </div>
+
+            {/* ... middle code ... */}
 
             <div className="flex items-start space-x-6">
               <div className="w-16 h-16 bg-navy rounded-2xl flex items-center justify-center text-[#D4AF37] shrink-0 shadow-lg">
@@ -87,21 +94,29 @@ const Contact = () => {
               <div>
                 <h4 className="font-bold text-navy uppercase tracking-wider text-sm mb-2">WhatsApp</h4>
                 <p className="text-slate-600 text-lg leading-relaxed">
-                  (99) 9259-3769
+                  (99) 98259-3769
                 </p>
               </div>
             </div>
 
-            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[350px] border-4 border-white">
-              <iframe
-                src="https://maps.google.com/maps?q=Rua%20Tom%C3%A9%20de%20Souza,%20897-A,%20Bairro%20S%C3%A3o%20Sebasti%C3%A3o,%20Cod%C3%B3-MA&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-              ></iframe>
-            </div>
+            {/* Nova Imagem Visão */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white group mt-8"
+            >
+              <img 
+                src="/img/visao.jpeg" 
+                alt="Nossa Visão" 
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+                <span className="text-white font-serif italic text-xl">IALF - Uma visão de Reino</span>
+              </div>
+            </motion.div>
+
           </motion.div>
         </div>
       </div>

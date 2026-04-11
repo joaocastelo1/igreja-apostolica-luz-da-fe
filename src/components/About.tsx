@@ -6,8 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const aboutSlides = [
   { url: "/img/logo_1.png", title: "Nossa Identidade", isLogo: true },
-  { url: "/img/banner_luz_da_fe-1.png", title: "Nossa Casa", isLogo: false },
-  { url: "/img/visao_area_do_templo.jpeg", title: "Nossa Visão", isLogo: false }
+  { url: "/img/banner_luz_da_fe-1.png", title: "Nossa Casa", isLogo: false }
 ];
 
 const About = () => {

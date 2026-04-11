@@ -10,11 +10,12 @@ import {
 // Assets baseados nas fotos enviadas pelo usuário
 const ASSETS = {
   LOGO: "/img/logo 1.png",
-  CHURCH_SERVICE: "/img/igreja cheia dentro.jpeg",
-  PASTOR_PREACHING: "/img/pastor bruno.jpeg",
-  PASTOR_FAMILY: "/img/pastor e familia.jpeg",
-  ALTAR: "/img/igreja cheia dentro.jpeg",
-  EXTERIOR: "/img/banner luz da fe.jpeg",
+  CHURCH_SERVICE: "/img/igreja_com_a_banda.png",
+  PASTOR_PREACHING: "/img/pastor1.jpeg",
+  PASTOR_FAMILY: "/img/pastor_e_familia1.jpg",
+  ALTAR: "/img/pastor2.jpeg",
+  EXTERIOR: "/img/banner_luz_da_fe-1.png",
+  PASTOR_PREACHING2: "/img/pastor1.jpeg",
 };
 
 const PLACEHOLDERS = {
@@ -78,12 +79,12 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-[#0A1128]/95 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-gold shadow-lg">
-            <img src={ASSETS.LOGO} alt="IALF Logo" className="w-full h-full object-contain p-1 photo-enhance" />
+          <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-gold shadow-lg">
+            <img src={ASSETS.LOGO} alt="IALF Logo" className="w-full h-full object-contain p-1" />
           </div>
           <div className="flex flex-col">
-            <span className={`font-serif font-bold text-xl leading-none text-white tracking-tight`}>LUZ DA FÉ</span>
-            <span className="text-[9px] text-blue-300 uppercase tracking-[0.25em] font-semibold">Igreja Apostólica IALF</span>
+            <span className={`font-serif font-bold text-3xl md:text-4xl leading-none text-white tracking-tight`}>LUZ DA FÉ</span>
+            <span className="text-sm md:text-base text-yellow-500 uppercase tracking-[0.25em] font-bold">Igreja</span>
           </div>
         </div>
 
@@ -131,24 +132,19 @@ const Navbar = () => {
 const Hero = () => {
   const slides = [
     {
-      title: "A Glória de Deus na Sua Vida!",
-      subtitle: "Seja bem-vindo à Igreja Apostólica Luz da Fé em Codó-MA.",
-      image: ASSETS.EXTERIOR,
+      title: "A Igreja",
+      subtitle: "Liderança",
+      image: ASSETS.PASTOR_PREACHING,
     },
     {
-      title: "Um Lugar de Transformação",
-      subtitle: "Sob a liderança do Pastor Bruno Boavista Castelo Branco.",
-      image: ASSETS.ALTAR,
+      title: "Mídia",
+      subtitle: "Cultos",
+      image: ASSETS.PASTOR_FAMILY,
     },
     {
-      title: "Adoração em Família",
-      subtitle: "Venha louvar a Deus conosco!",
-      image: ASSETS.CHURCH_SERVICE,
-    },
-    {
-      title: "Nossa Casa",
-      subtitle: "Um lugar de paz e comunhão.",
-      image: ASSETS.EXTERIOR,
+      title: "Contribuição",
+      subtitle: "Contato",
+      image: ASSETS.PASTOR_PREACHING,
     }
   ];
 
@@ -162,43 +158,50 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative h-screen overflow-hidden bg-black">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <div className="absolute inset-0 bg-[#0A1128]/50 z-10"></div>
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className={`w-full h-full object-cover photo-enhance animate-[ken-burns_20s_infinite_alternate] transition-transform duration-[10000ms] ${index === current ? 'scale-110' : 'scale-100'}`}
-          />
-          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
-            <span className="text-gold font-bold tracking-[0.4em] uppercase text-sm mb-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">IALF - Codó</span>
-            <h1 className="text-5xl md:text-8xl font-serif text-white mb-6 max-w-5xl leading-tight opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards]">
-              {slide.title}
-            </h1>
-            <p className="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards] font-light">
-              {slide.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-[fadeIn_1s_ease-out_0.9s_forwards]">
-              <a href="#contato" className="gold-gradient text-white font-bold py-5 px-12 rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all uppercase text-xs tracking-[0.2em]">
-                Venha nos visitar
-              </a>
-              <a href="#midia" className="border-2 border-white/50 text-white font-bold py-5 px-12 rounded-full hover:bg-white hover:text-black transition-all uppercase text-xs tracking-[0.2em] backdrop-blur-sm">
-                Assista aos cultos
-              </a>
-            </div>
+    <section id="home" className="relative overflow-hidden bg-black pt-24">
+      <div className="relative h-[60vh] overflow-hidden">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <div className="absolute inset-0 bg-[#0A1128]/90 z-10"></div>
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className={`w-full h-full object-cover photo-enhance ${index === current ? 'scale-105' : 'scale-100'}`}
+            />
           </div>
+        ))}
+      </div>
+      <div className="absolute top-24 left-0 right-0 z-20 flex flex-col items-center justify-center h-full text-center px-6">
+        <h1 className="text-4xl md:text-7xl font-serif text-white mb-4 max-w-[90%] leading-tight font-black drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]">
+          Seja Bem-vindo à IALF
+        </h1>
+        <h2 className="text-3xl md:text-6xl font-serif text-yellow-400 mb-6 max-w-[90%] leading-tight font-black drop-shadow-[0_2px_15px_rgba(0,0,0,0.9)]">
+          Igreja Luz da Fé
+        </h2>
+        <p className="text-xl md:text-3xl text-yellow-100 mb-6 max-w-[80%] font-bold leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Um lugar onde a Glória de Deus se manifesta em cada detalhe
+        </p>
+        <p className="text-lg md:text-2xl text-yellow-300 mb-8 max-w-[80%] font-bold leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+          Sob a liderança do Pastor Bruno Boavista Castelo Branco
+        </p>
+        <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+          <a href="#contato" className="gold-gradient text-white font-black py-3 px-8 rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all uppercase text-xs tracking-[0.2em]">
+            Venha nos visitar
+          </a>
+          <a href="#midia" className="border-2 border-white/70 text-white font-black py-3 px-8 rounded-full hover:bg-white hover:text-black transition-all uppercase text-xs tracking-[0.2em] backdrop-blur-sm">
+            Assista aos cultos
+          </a>
         </div>
-      ))}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1.5 rounded-full transition-all duration-500 ${i === current ? 'bg-gold w-12' : 'bg-white/30 w-6'}`}
+            className={`h-1.5 rounded-full transition-all duration-500 ${i === current ? 'bg-yellow-400 w-12' : 'bg-white/30 w-6'}`}
           ></button>
         ))}
       </div>
@@ -230,7 +233,7 @@ const AboutSection = () => {
               />
               <div className="absolute -bottom-8 -right-8 w-full h-full border-4 border-gold/30 rounded-2xl -z-0"></div>
               <div className="absolute top-4 left-4 z-20 bg-dark-blue/80 backdrop-blur-md p-4 rounded-xl text-white text-sm font-bold border-l-4 border-gold">
-                "Pregando a Verdade"
+                &quot;Pregando a Verdade&quot;
               </div>
             </div>
           </div>
@@ -289,7 +292,7 @@ const LeadershipSection = () => {
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-8">Pastor Bruno & Família</h2>
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed italic border-l-4 border-gold pl-6 py-2">
-                "Nossa missão é ver a Glória de Deus alcançando cada lar em Codó e além."
+                &quot;Nossa missão é ver a Glória de Deus alcançando cada lar em Codó e além.&quot;
               </p>
               <p className="text-gray-400 leading-relaxed text-lg">
                 Com um coração voltado para o serviço e o ensino, o Pastor Bruno Boavista Castelo Branco lidera a IALF com transparência e fervor espiritual. Juntamente com sua esposa e filhos, ele dedica-se ao pastoreio integral, cuidando de cada membro com amor, excelência e dedicação.
@@ -481,6 +484,7 @@ const MediaSection = () => {
 
 const ScheduleSection = () => {
   const events = [
+    { day: "Sábado", name: "Culto dos Jovens", time: "18:00", desc: "Encontro da juventude com louvor, Palavra e comunhão." },
     { day: "Domingo", name: "Culto de Celebração", time: "19:00", desc: "Celebração apostólica com louvor e palavra profética." },
     { day: "Terça-feira", name: "Noite de Clamor", time: "20:00", desc: "Oração fervorosa por curas, milagres e libertação." },
     { day: "Quinta-feira", name: "Ensino da Palavra", time: "20:00", desc: "Aprofundamento bíblico e discipulado para toda a família." }
@@ -493,6 +497,9 @@ const ScheduleSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <SectionHeading title="Agenda Semanal" subtitle="Venha Adorar" light />
+        <div className="max-w-5xl mx-auto mb-12">
+          <img src="/img/horarios_do_culto.jpg" alt="Horários de Culto" className="w-full rounded-3xl shadow-2xl" />
+        </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 gap-8">
           {events.map((event, idx) => (
             <div key={idx} className="bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col md:flex-row items-center gap-10 fade-in hover:bg-white/10 transition-all duration-500 group">

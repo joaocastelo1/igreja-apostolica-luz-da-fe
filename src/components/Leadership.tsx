@@ -95,38 +95,29 @@ const Leadership = () => {
             <div className="space-y-10">
               <div className="bg-white/5 p-8 rounded-[2.5rem] border-l-8 border-[#D4AF37] relative shadow-2xl backdrop-blur-sm">
                 <p className="text-gray-100 text-xl md:text-2xl leading-relaxed italic font-light">
-                  Eu e a minha casa serviremos ao Senhor. (Josué 24:15) — Um lar edificado na rocha é a base para uma vida de vitórias e comunhão plena com Deus.
+                  &quot;Onde há visão, o povo floresce. Nossa missão é manifestar o Reino de Deus através de curas, milagres e uma fé inabalável que transforma realidades.&quot;
                 </p>
+                <p className="text-[#D4AF37] mt-4 font-bold text-sm uppercase tracking-widest">— Visão Apostólica</p>
               </div>
 
               <div className="grid grid-cols-1 gap-8">
                 <div className="flex items-center space-x-6 p-6 bg-white/5 rounded-3xl border border-white/5 hover:border-[#D4AF37]/30 transition-colors group">
                   <div className="w-16 h-16 gold-gradient rounded-2xl flex items-center justify-center text-white shadow-lg shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="font-serif text-2xl font-bold">PB</span>
+                    <span className="font-serif text-2xl font-bold">BB</span>
                   </div>
                   <div>
-                    <h4 className="text-[#D4AF37] font-bold text-lg leading-none mb-2 tracking-wide uppercase">Pr. Bruno Boavista</h4>
-                    <p className="text-gray-400 text-sm">Liderança Apostólica e Visão</p>
+                    <h4 className="text-[#D4AF37] font-bold text-lg leading-none mb-2 tracking-wide uppercase">Pastor Bruno Boavista</h4>
+                    <p className="text-gray-400 text-sm">Liderança Apostólica, Curas e Milagres</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-6 p-6 bg-white/5 rounded-3xl border border-white/5 hover:border-[#D4AF37]/30 transition-colors group">
                   <div className="w-16 h-16 bg-navy-light rounded-2xl flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/20 shadow-lg shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="font-serif text-2xl font-bold">MA</span>
+                    <span className="font-serif text-2xl font-bold">AB</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg leading-none mb-2 tracking-wide uppercase">Miss. Andreia</h4>
-                    <p className="text-gray-400 text-sm">Pastoreio e Aconselhamento</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-6 p-6 bg-white/5 rounded-3xl border border-white/5 hover:border-[#D4AF37]/30 transition-colors group">
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-white shadow-lg shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="font-serif text-2xl font-bold">RC</span>
-                  </div>
-                  <div>
-                    <h4 className="text-gray-300 font-bold text-lg leading-none mb-2 tracking-wide uppercase">Rodrigo Castelo</h4>
-                    <p className="text-gray-500 text-sm">Juventude e Futuro</p>
+                    <h4 className="text-white font-bold text-lg leading-none mb-2 tracking-wide uppercase">Missionária Andrea Boavista</h4>
+                    <p className="text-gray-400 text-sm">Ministério Infantil - IALF KIDS</p>
                   </div>
                 </div>
               </div>

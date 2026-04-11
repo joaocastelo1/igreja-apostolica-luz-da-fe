@@ -29,7 +29,7 @@
 }
 
 .photo-enhance {
-  filter: contrast(1.1) brightness(1.05) saturate(1.1);
+  filter: contrast(1.1) brightness(0.75) saturate(1.1);
 }
 
 @keyframes ken-burns {
