@@ -30,7 +30,7 @@ const events = [
 
 const scheduleSlides = [
   { url: "/img/horarios_do_culto.jpg", alt: "Horários de Culto" },
-  { url: "/img/jovens2.jpeg", alt: "Rede de Jovens" }
+  { url: "/img/jovens3.jpeg", alt: "Rede de Jovens" }
 ];
 
 const Schedule = () => {

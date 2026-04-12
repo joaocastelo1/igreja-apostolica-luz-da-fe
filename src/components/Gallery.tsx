@@ -14,7 +14,6 @@ const galleryPhotos = [
   { url: "/img/pastor3.jpeg" },
   { url: "/img/pastor4.jpeg" },
   { url: "/img/pastor5.jpeg" },
-  { url: "/img/santa_ceia.png" },
   { url: "/img/visao.jpeg" },
 ];
 
