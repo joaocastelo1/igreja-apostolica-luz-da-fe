@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Instagram, Facebook, Youtube, MapPin, Phone, Heart } from 'lucide-react';
+import { Instagram, Facebook, Youtube, MapPin, Phone, Heart, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -91,14 +91,21 @@ const Footer = () => {
               <Heart size={10} className="text-red-500 fill-red-500" />
               <span>para o Reino de Deus</span>
             </p>
-            <a 
-              href="https://wa.me/5586999032854" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:text-[#D4AF37] transition-colors font-bold"
-            >
-              Dev: João Castelo de Sousa Ferreira
-            </a>
+            <div className="flex flex-col items-center md:items-end space-y-3 pt-2">
+              <span className="text-gray-400 font-bold uppercase tracking-widest text-[9px]">Desenvolvedor</span>
+              <p className="text-white font-medium text-[11px] tracking-wider uppercase">João Castelo de Sousa Ferreira</p>
+              <a 
+                href="https://wa.me/5586999032854" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg group"
+              >
+                <div className="bg-white rounded-full p-1 leading-none">
+                  <MessageCircle size={14} className="text-green-500" />
+                </div>
+                <span className="font-bold text-[10px] tracking-widest uppercase">(86) 99903-2854</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

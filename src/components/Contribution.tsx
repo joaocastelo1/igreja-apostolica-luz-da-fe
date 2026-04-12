@@ -109,8 +109,8 @@ export default function Contribution() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
               <div className="flex items-center space-x-4 md:space-x-6 mb-8 md:mb-10">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-2xl flex items-center justify-center p-2 shadow-inner shrink-0">
-                  <img src="/img/logo s.png" alt="Logotipo Santander" className="w-full h-full object-contain" />
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl md:rounded-2xl flex items-center justify-center p-1 shadow-inner shrink-0">
+                  <img src="/img/santander-logo.png" alt="Logotipo Santander" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h4 className="text-[#D4AF37] font-bold uppercase tracking-widest text-[10px] md:text-xs mb-1 md:mb-2">Transferência Bancária</h4>
