@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-3 sm:space-x-4 cursor-pointer">
           <div className="w-14 sm:w-20 h-14 sm:h-20 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.4)] group transition-transform hover:scale-110">
-            <img src="/img/logo_1.png" alt="IALF Logo" className="w-full h-full object-contain p-1 sm:p-1.5" />
+            <img src="/img/logobg.png" alt="IALF Logo" className="w-full h-full object-contain p-1 sm:p-1.5" />
           </div>
           <div className="flex flex-col">
             <span className="font-serif font-black text-xl sm:text-3xl leading-none text-white tracking-tight drop-shadow-[0_4px_6px_rgba(0,0,0,1)] uppercase">Luz da Fé</span>
@@ -79,7 +79,7 @@ const Navbar = () => {
             className="fixed inset-0 bg-[#060B1A] z-40 lg:hidden flex flex-col items-center justify-center space-y-10"
           >
             <Link href="/" onClick={() => setIsOpen(false)} className="w-28 sm:w-40 h-28 sm:h-40 bg-white rounded-full mb-6 sm:mb-10 p-4 sm:p-6 shadow-[0_0_50px_rgba(212,175,55,0.3)] border-4 border-[#D4AF37] block cursor-pointer transition-transform hover:scale-105">
-              <img src="/img/logo_1.png" alt="IALF Logo" className="w-full h-full object-contain" />
+              <img src="/img/logobg.png" alt="IALF Logo" className="w-full h-full object-contain" />
             </Link>
             {navLinks.map((link) => (
               <a

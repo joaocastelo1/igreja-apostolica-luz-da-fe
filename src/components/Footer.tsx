@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="space-y-6">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 border-2 border-[#D4AF37]">
-                <img src="/img/logo_1.png" alt="Logo IALF" className="w-full h-full object-contain" />
+                <img src="/img/logobg.png" alt="Logo IALF" className="w-full h-full object-contain" />
               </div>
               <span className="font-serif font-bold text-xl tracking-tight">IALF</span>
             </div>

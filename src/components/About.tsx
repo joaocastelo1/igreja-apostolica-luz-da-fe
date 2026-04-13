@@ -5,7 +5,7 @@ import { BookOpen, MapPin, Users, ChevronLeft, ChevronRight } from 'lucide-react
 import { motion, AnimatePresence } from 'framer-motion';
 
 const aboutSlides = [
-  { url: "/img/logo_1.png", title: "Nossa Identidade", isLogo: true },
+  { url: "/img/logobg.png", title: "Nossa Identidade", isLogo: true },
   { url: "/img/banner_luz_da_fe-1.png", title: "Nossa Casa", isLogo: false }
 ];
 

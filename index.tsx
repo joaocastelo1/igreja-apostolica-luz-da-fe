@@ -9,7 +9,7 @@ import {
 // Assets baseados nas fotos enviadas pelo usuário
 // Assets baseados nas fotos enviadas pelo usuário
 const ASSETS = {
-  LOGO: "/img/logo 1.png",
+  LOGO: "/img/logobg.png",
   CHURCH_SERVICE: "/img/igreja_com_a_banda.png",
   PASTOR_PREACHING: "/img/pastor1.jpeg",
   PASTOR_FAMILY: "/img/pastor_e_familia1.jpg",
