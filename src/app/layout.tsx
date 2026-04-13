@@ -15,6 +15,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Igreja Apostólica Luz da Fé (IALF)",
   description: "Um lugar onde a Glória de Deus se manifesta em cada detalhe. Sob a liderança do Pastor Bruno Boavista Castelo Branco.",
+  icons: {
+    icon: '/img/logo_1.png',
+    shortcut: '/img/logo_1.png',
+    apple: '/img/logo_1.png',
+  },
 };
 
 export default function RootLayout({
