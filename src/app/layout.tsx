@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   title: "Igreja Apostólica Luz da Fé (IALF)",
   description: "Um lugar onde a Glória de Deus se manifesta em cada detalhe. Sob a liderança do Pastor Bruno Boavista Castelo Branco.",
   icons: {
-    icon: '/img/logo_1.png',
-    shortcut: '/img/logo_1.png',
-    apple: '/img/logo_1.png',
+    icon: '/img/favicon_logo.ico',
+    shortcut: '/img/favicon_logo.ico',
+    apple: '/img/favicon_logo.ico',
   },
   openGraph: {
     title: "Igreja Apostólica Luz da Fé",
