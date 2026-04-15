@@ -84,7 +84,20 @@ const Footer = () => {
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-500">
-          <p>© {new Date().getFullYear()} Igreja Apostólica Luz da Fé. Todos os direitos reservados.</p>
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <p>© {new Date().getFullYear()} Igreja Apostólica Luz da Fé. Todos os direitos reservados.</p>
+            <a
+              href="https://igrejaa-ap-lf.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#D4AF37]/40 px-3 py-1.5 rounded-full transition-all duration-300 group"
+            >
+              <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center overflow-hidden border border-[#D4AF37]/60 shrink-0">
+                <img src="/img/logobg.png" alt="Logo IALF" className="w-full h-full object-contain p-0.5" />
+              </div>
+              <span className="text-gray-300 group-hover:text-[#D4AF37] transition-colors text-[9px] tracking-widest">igrejaa-ap-lf.vercel.app</span>
+            </a>
+          </div>
           <div className="mt-4 md:mt-0 flex flex-col items-center md:items-end space-y-2">
             <p className="flex items-center space-x-1">
               <span>Desenvolvido com</span>

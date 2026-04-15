@@ -27,13 +27,19 @@ export const metadata: Metadata = {
     siteName: "Igreja Apostólica Luz da Fé",
     images: [
       {
-        url: "/img/logo_1.png",
+        url: "https://igrejaa-ap-lf.vercel.app/img/logobg.png",
         width: 800,
-        height: 600,
-        alt: "Logo Igreja Luz da Fé",
+        height: 800,
+        alt: "Logo Igreja Apostólica Luz da Fé",
       },
     ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Igreja Apostólica Luz da Fé",
+    description: "Um lugar onde a Glória de Deus se manifesta em cada detalhe. Sob a liderança do Pastor Bruno Boavista Castelo Branco.",
+    images: ["https://igrejaa-ap-lf.vercel.app/img/logobg.png"],
   },
 };
 
